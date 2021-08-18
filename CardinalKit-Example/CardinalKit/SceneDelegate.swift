@@ -32,8 +32,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let viewController = LaunchViewController()
-        window.rootViewController = viewController
+        
+        if let user = CKStudyUser.shared.currentUser {
+            let contentView = MainUIView()
+            window.rootViewController = UIHostingController(rootView: contentView)
+        } else {
+            let viewController = LaunchViewController()
+            window.rootViewController = viewController
+        }
+        
         self.window = window
         window.makeKeyAndVisible()
         

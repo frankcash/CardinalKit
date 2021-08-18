@@ -16,10 +16,6 @@ final class LaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    func viewDidAppear(){
-        print("The view appeared")
-    }
 
     @IBAction func joinStudy(_ sender: Any) {
         let taskViewController = ORKTaskViewController(task: OnboardingTask, taskRun: nil)
