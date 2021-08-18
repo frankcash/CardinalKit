@@ -5,7 +5,7 @@
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CardinalKit/CardinalKit",
   "license": {
-    "type": "ELP2",
+    "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
